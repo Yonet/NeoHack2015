@@ -4,4 +4,8 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
+<<<<<<< HEAD
 .txt
+=======
+.txt
+>>>>>>> c21ea8eb59854ce41f3c8cbdf86203e376716499
