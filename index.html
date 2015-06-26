@@ -40,10 +40,9 @@
 				<section>
 					<h1>D3.js</h1>
 					<h3>Data-Driven Documents</h3>
-					<p>Aysegul Yonet / <a href="https://twitter.com/tevgende" target="_blank">@AysegulYonet</a>
-					<p>Slides : <a href="http://bit.ly/Neohack-d3" target="_blank">http://bit.ly/Neohack-d3</a></p>
+					<p>Aysegul Yonet / <a href="https://twitter.com/tevgende" target="_blank">@AysegulYonet</a></p>
+					<p>Slides : <a href="http://bit.ly/Neohack-d3" target="_blank">bit.ly/Neohack-d3</a></p>
 
-					</p>
 				</section>
 				<!-- 1 -->
 				<section>
@@ -65,33 +64,38 @@
 					<h3> Then Why?</h3>
 						<p>Lot's of <a href="http://d3js.org/" target="_blank">examples</a></p>
 				</section>
-				<!-- Example of nested vertical slides -->
 
+				<!-- SVG Nested -->
 				<section>
 					<section>
 						<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG</a></h2>
 						<ul>
-							SVG is another HTML element, except you can't put another HTML element inside an SVG. 
+							<li class="fragment">SVG is another HTML element, except you can't put another HTML element inside an SVG.</li>
+							<li class="fragment">SVG does not support common HTML attributes or styles such as position, left, top, right, bottom or float.</li>
+							
 						</ul>
 
-						<p>
-							SVG does not support common HTML attributes or styles such as position, left, top, right, bottom or float.
-						</p>
-						<aside class="notes"></aside>
+						<aside class="notes">
+						SVG is an XML markup language for describing two-dimensional vector graphics.
+						</aside>
 					</section>
 					<!-- svg -->
 
+					<!-- circle -->
 					<section>
 						<h3><a href="http://jsfiddle.net/yonet3d/1g1hcsbk/" target="_blank">Circle</a></h3>
 						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-							<circle
-								cx=250
-								cy=100
-								r=30
-								fill='#25B0B0'>
-							</circle>
+<circle
+	cx=250
+	cy=100
+	r=30
+	fill='#25B0B0'>
+</circle>
 						</code></pre>
 					</section>
+					<!-- /circle -->
+
+					<!-- rectangle -->
 					<section>
 						<h3><a href="http://jsfiddle.net/yonet3d/3q7atsmh/" target="_blank">Rectangle</a></h3>
 						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
@@ -108,6 +112,9 @@ fill='#25B0B0'>
 						<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx">Interesting fact: </a>if a properly specified value is provided for rx but not for ry (or the opposite), then the browser will consider the missing value equal to the defined one.
 						</p>
 					</section>
+					<!-- rectangle -->
+
+					<!-- line -->
 					<section>
 						<h3><a href="http://jsfiddle.net/yonet3d/arq8r1ar/3/" target="_blank">Line</a></h3>
 						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
@@ -121,6 +128,9 @@ fill='#25B0B0'>
 </line>
 						</code></pre>
 					</section>
+					<!-- line -->
+
+					<!-- path -->
 					<section>
 						<h3><a href="http://jsfiddle.net/yonet3d/arq8r1ar/" target="_blank">Path</a></h3>
 						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
@@ -143,6 +153,8 @@ stroke='#25B0B0'>
 							<li>z - close path.</li>
 						</ul>
 					</section>
+					<!-- /path -->
+
 					<section>
 						<h3>Text</h3>
 						<p>Unless you set the style of the SVG text, it inherits font-styles from CSS.</p>
@@ -154,9 +166,10 @@ stroke='#25B0B0'>
 </svg>
 						</code></pre>
 					</section>
+
+					<!-- group -->
 					<section>
 						<h3>Group</h3>
-						<!-- TODO: jsfiddle -->
 						<p>Any transformations (positioning, scaling, rotating) that are applied to the group element will also be applied to each of the child elements.</p>
 						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 <g transform='translate(100, 100)'>
@@ -168,41 +181,42 @@ stroke='#25B0B0'>
 										
 						</code></pre>
 					</section>
+					<!-- /group -->
+
+					<!--svg styles -->
 					<section>
 						<h3>SVG styles</h3>
 						<ul>
-						<!-- TODO -->
 							<li>background-color = fill</li>
 							<li>border = stroke</li>
 						</ul>
 					</section>
+					<!-- /svg styles -->
 
 				</section>
-			<!-- /SVG -->
+				<!-- /SVG Nested -->
+
 				<section>
 					<h2>How to D3</h2>
 					<h3>Procedure to associate data with DOM</h3>
 						<ol>
-							<li>Select a parent container and child nodes</li>
-							<li>Bind array of data to child nodes</li>
-							<li>Append nodes to parent container</li>
-							<li>Bind events, style and animate!</li>
+							<li class="fragment">Select a parent container and child nodes</li>
+							<li class="fragment">Bind array of data to child nodes</li>
+							<li class="fragment">Append nodes to parent container</li>
+							<li class="fragment">Bind events, style and animate!</li>
 						</ol>
 					<!-- <img src="images/selection"></img> -->
 					<aside class="notes">
 						Large datasets can be easily bound to SVG objects using simple D3 functions to generate rich text/graphic charts and diagrams. The data can be in various formats, most commonly JSON, comma-separated values (CSV) or geoJSON.
 					</aside>
 				</section>
-					<!-- <section>
-						<h2>Central Principle</h2>
-						<p>
-							Code samples here?
-						</p> 
-						<aside class="notes">The central principle of D3 design is to enable the programmer to first use a CSS-style selector to select a given set of Document Object Model (DOM) nodes, then use operators to manipulate them in a similar manner to jQuery.</aside>
-					</section> -->
+				<section>
+					<h2>Central Principle</h2>
+					
+					<aside class="notes">The central principle of D3 design is to enable the programmer to first use a CSS-style selector to select a given set of Document Object Model (DOM) nodes, then use operators to manipulate them in a similar manner to jQuery.</aside>
+				</section>
 				<section>
 					<h2><a href="http://jsfiddle.net/yonet3d/y5gv81pg/8/">Selection</a></h2>
-					<p>Select a parent container and child nodes</p>
 					<h4>jQuery</h4>
 					<pre><code data-trim contenteditable style="font-size: 28px; margin-top: 20px;">
 						var paragraphs = $("div p");
@@ -211,12 +225,10 @@ stroke='#25B0B0'>
 					<pre><code data-trim contenteditable style="font-size: 28px; margin-top: 20px;">
 						var paragraphs = d3.select("div").selectAll("p");
 					</code></pre>
-					<p>D3 difference: child nodes might not actually exist</p>
-					<p>
-						Selectors in D3 are declared the same way as CSS rules. An important difference is that a D3 selector object only contains the elements that matched the selection rule when the selection was first created.
-					</p>
 					
 					<aside class="notes">
+						D3 difference: child nodes might not actually exist.
+						Selectors in D3 are declared the same way as CSS rules. An important difference is that a D3 selector object only contains the elements that matched the selection rule when the selection was first created.
 						The selection can be based on tag (as in the below example), class, identifier, attribute, or place in the hierarchy. Once elements are selected, one can apply operations to them. This includes getting and setting attributes, display texts, and styles. Elements may also be added and removed. This process of modifying, creating and removing HTML elements can be made dependent on data, which is the basic concept of D3.js.
 					</aside>
 				</section>
@@ -225,8 +237,8 @@ stroke='#25B0B0'>
 					<h2>Data</h2>
 					<p>Bind array of data to child nodes</p>
 					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-						d3.selectAll("p")
-							.data([3, 7, 21, 31, 35, 42])
+d3.selectAll("p")
+	.data([3, 7, 21, 31, 35, 42])
 					</code></pre>
 					<p><a href="http://jsfiddle.net/yonet3d/cw6s96my/">JSFiddle</a></p>
 				</section>
@@ -234,19 +246,19 @@ stroke='#25B0B0'>
 				<section>
 					<h2>Enter() and Append()</h2>
 
-					<p>When data is bound to a selection, each element in the data array is paired with the corresponding node in the selection. If there are fewer nodes than data, the extra data elements form the enter selection, which you can instantiate by appending to the enter selection</p>
 					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-						d3.select("body").selectAll("p")
-								.data([3, 7, 21, 31, 35, 42])
-							.enter().append("p");
+d3.select("body").selectAll("p")
+		.data([3, 7, 21, 31, 35, 42])
+	.enter().append("p");
 					</code></pre>
-					<!-- .text(function(d) { return "I’m number " + d + "!"; }); -->
 					<p><a href="http://jsfiddle.net/yonet3d/93ooqk53/1/">JSFiddle</a></p>
+					<aside class="notes">
+					When data is bound to a selection, each element in the data array is paired with the corresponding node in the selection. If there are fewer nodes than data, the extra data elements form the enter selection, which you can instantiate by appending to the enter selection
+					</aside>
 				</section>
 
 				<section>
 					<h2>Exit() and Remove()</h2>
-					<p>Using D3’s exit and remove, you can get rid of outgoing nodes that are no longer needed.</p>
 					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 var bars = d3.select('svg').selectAll('rect').data(someData);
 
@@ -256,10 +268,12 @@ bars.enter().append('rect')
 //if we have less data points, remove the rectangles that no longer have a data pairing. 
 bars.exit().remove();
 					</code></pre>
+					<aside class="notes">
+					Using D3’s exit and remove, you can get rid of outgoing nodes that are no longer needed.
+					</aside>
 				</section>
 
 				<section>
-					<p>if you forget about the enter and exit selections, you will automatically select only the elements for which there exists corresponding data.</p>
 					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 // Update…
 var p = d3.select("body").selectAll("p")
@@ -271,8 +285,10 @@ p.enter().append("p")
 // Exit…
 p.exit().remove();
 					</code></pre>
-					<!-- <p><a href="http://jsfiddle.net/yonet3d/ubmk6j27/4/" target="_blank">JSFiddle</a></p> -->
-					<p>By handling these three cases separately, you specify precisely which operations run on which nodes.</p>
+					<aside class="notes">
+					if you forget about the enter and exit selections, you will automatically select only the elements for which there exists corresponding data.
+					By handling these three cases separately, you specify precisely which operations run on which nodes.
+					</aside>
 				</section>
 
 				<section>
