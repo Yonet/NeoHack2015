@@ -1,1 +1,2 @@
-D3.js introduction workshop Data Week + API World Conference 2014, San Francisco.
+D3.js introduction workshop GDI NeoHack 2015, San Francisco.
+http://yonet.github.io/NeoHack2015/#/
