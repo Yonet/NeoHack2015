@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+</style>
+<svg class="chart"></svg>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500;
+//Helper Functions
+var y = d3.scale.linear()
+    .range([height, 0]);//svg 0 is on top the screen
+
+//Viz
+var chart = d3.select(".chart")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.tsv("data.tsv", type, function(error, data) {
+  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);//array of objects
+
+
+  var barWidth = width / data.length;
+
+  var bar = chart.selectAll("g")//group
+      .data(data)
+    .enter().append("g")
+      .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });//svg property
+      //https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform
+
+  bar.append("rect")
+      .attr("y", function(d) { return y(d.frequency); })
+      .attr("height", function(d) { return height - y(d.frequency); })
+      .attr("width", barWidth - 1);
+
+  bar.append("text")
+      .attr("x", barWidth / 2)
+      .attr("y", function(d) { return y(d.frequency) + 3; })//so it is on top
+      .attr("dy", ".75em")//TODO .em
+      .text(function(d) { return d.frequency; });
+});
+
+function type(d) {
+  d.frequency = +d.frequency;// coerce to number
+  return d;
+}
+
+</script>

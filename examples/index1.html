@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+</style>
+<div class="chart"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var data = [3, 7, 21, 31, 35, 42];
+
+var width = window.innerWidth;
+////iteration1...//TODO ayri update enter...
+//TODO talk about returning a new selection
+// d3.select(".chart")//selecting the chart class. This is where the graph goes...
+//   .selectAll("div")
+//     .data(data)
+//   .enter().append("div")
+//     .style("width", function(data) { return data * 20 + "px"; })//functions
+//     .text(function(data,i) { return i; });
+
+//NOTE: There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, selection.append returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements.
+
+// //iteration2...
+//selects the chart class
+// var chart = d3.select(".chart");
+// //selects the divs
+// var bar = chart.selectAll("div");
+// var barUpdate = bar.data(data);
+
+// //TODO enter append reason ? append div yerine baska birsey
+// //TODO talk about returning a new selection
+// var barEnter = barUpdate.enter().append("div");
+// barEnter.style("width", function(d) { return d * 10 + "px"; });
+// barEnter.text(function(d) { return d; });
+
+////iteration3...
+
+//TODO scales and domain slides
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])//min and max of data that you want to show
+    .range([0, width]);//representation of it. 
+
+d3.select(".chart")
+  .selectAll("div")
+    .data(data)
+  .enter().append("div")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; });
+
+</script>

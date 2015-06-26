@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+
+.chart circle {
+  /*fill: steelblue;*/
+  opacity: 50%;
+}
+
+
+
+text {
+  fill: white;
+  text-anchor: middle;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+</style>
+<svg class="chart"></svg>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+//Our boring data
+var data =[4, 8, 15, 16, 23, 42];
+
+//define the width as a variable so that you can use it to define multiple things and change it in one place if you need to
+var width = window.innerWidth,
+    barHeight = 20,
+    height = window.innerHeight;
+var color = d3.scale.category20();
+
+//our good old scale
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, width]);
+
+//select the element with the chart class and define width and height
+var chart = d3.select(".chart")
+    .attr("width", width)
+    .attr("height", height);
+
+// d3.csv("popular_languages2014.csv")
+// 	.row(function(d) { return {key: d.key, value: +d.value}; })
+//     .get(function(error, rows) { console.log(rows); });
+
+///TODO
+d3.csv("popular_languages2014.csv", function(d) {
+  return {
+    key: d.key,
+    value: d.value
+  };
+}, function(error, rows) {
+  console.log(rows);
+});
+//create groups for bars
+var bar = chart.selectAll("g")
+    .data(data)
+  .enter().append("g")
+    .attr("transform", function(d, i) { return "translate("+ Math.random() * 1000 +"," + Math.random() * 50 + d * 2 + ")"; });//
+
+//creates the circles
+
+bar.append("circle")
+    .attr("r", function(d) { return d * 5; })
+    // .attr("cx", function(d, i) { return Math.random() * 720 + d * 2; })
+    .attr('stroke', function(d) {return color(d)})
+    .attr('fill', function(d) {return color(d)})
+    .attr('fill-opacity', 0.5)
+    .attr("cy", function(d, i) { return  i * 20 + d * 2; })
+    .text(function(d){return d});
+
+// d3.selectAll('circle')
+bar.append('text')
+  .attr('fill', 'darkgray')
+  .attr('dy', '.9em')
+  .text(function(d){return d});
+
+    
+
+
+//appends text
+
+
+
+
+</script>
