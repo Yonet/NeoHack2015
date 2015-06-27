@@ -109,7 +109,7 @@ ry=0
 fill='#25B0B0'>
 </rect>
 						</code></pre>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx">Interesting fact: </a>if a properly specified value is provided for rx but not for ry (or the opposite), then the browser will consider the missing value equal to the defined one.
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx" target="_blank">Interesting fact: </a>if a properly specified value is provided for rx but not for ry (or the opposite), then the browser will consider the missing value equal to the defined one.
 						</p>
 					</section>
 					<!-- rectangle -->
@@ -216,7 +216,7 @@ stroke='#25B0B0'>
 					<aside class="notes">The central principle of D3 design is to enable the programmer to first use a CSS-style selector to select a given set of Document Object Model (DOM) nodes, then use operators to manipulate them in a similar manner to jQuery.</aside>
 				</section>
 				<section>
-					<h2><a href="http://jsfiddle.net/yonet3d/y5gv81pg/8/">Selection</a></h2>
+					<h2><a href="http://jsfiddle.net/yonet3d/y5gv81pg/8/" target="_blank">Selection</a></h2>
 					<h4>jQuery</h4>
 					<pre><code data-trim contenteditable style="font-size: 28px; margin-top: 20px;">
 						var paragraphs = $("div p");
@@ -240,7 +240,7 @@ stroke='#25B0B0'>
 d3.selectAll("p")
 	.data([3, 7, 21, 31, 35, 42])
 					</code></pre>
-					<p><a href="http://jsfiddle.net/yonet3d/cw6s96my/">JSFiddle</a></p>
+					<p><a href="http://jsfiddle.net/yonet3d/cw6s96my/" target="_blank">JSFiddle</a></p>
 				</section>
 
 				<section>
@@ -251,7 +251,7 @@ d3.select("body").selectAll("p")
 		.data([3, 7, 21, 31, 35, 42])
 	.enter().append("p");
 					</code></pre>
-					<p><a href="http://jsfiddle.net/yonet3d/93ooqk53/1/">JSFiddle</a></p>
+					<p><a href="http://jsfiddle.net/yonet3d/93ooqk53/1/" target="_blank">JSFiddle</a></p>
 					<aside class="notes">
 					When data is bound to a selection, each element in the data array is paired with the corresponding node in the selection. If there are fewer nodes than data, the extra data elements form the enter selection, which you can instantiate by appending to the enter selection
 					</aside>
@@ -293,11 +293,11 @@ p.exit().remove();
 
 				<section>
 					<h2>Let's give it a try</h2>
-					<p>Exercise: <a href="http://bit.ly/enter-exit-exercise">http://bit.ly/enter-exit-exercise</a></p>
+					<p>Exercise: <a href="http://bit.ly/enter-exit-exercise" target="_blank">bit.ly/enter-exit-exercise</a></p>
 				</section>
 
 				<section>
-					<p>If you get stuck...<a href="http://bit.ly/enter-exit-solution">Sotlution</a></p>
+					<p>If you get stuck...<a href="http://bit.ly/enter-exit-solution" target="_blank">Sotlution</a></p>
 				</section>
 				<section>
 					<p>
@@ -344,11 +344,11 @@ d3.selectAll("circle")
 				</section>
 				<section>
 					<h2>Try it for yourself</h2>
-					<p>Exercise 0: Look at the example and create a transition to change the size of the circles:<a href="http://bit.ly/d3-transitions">http://bit.ly/d3-transitions</a></p>
-					<p>Exercise 1: <a href="http://bit.ly/d3exercise1">http://bit.ly/d3exercise1</a></p>
+					<p>Exercise 0: Look at the example and create a transition to change the size of the circles:<a href="http://bit.ly/d3-transitions" target="_blank">bit.ly/d3-transitions</a></p>
+					<p>Exercise 1: <a href="http://bit.ly/d3exercise1" target="_blank">bit.ly/d3exercise1</a></p>
 				</section>
 				<section>
-					<p>In case you get stuck...<a href="http://jsfiddle.net/yonet3d/w319gwyw/"> Solution for Exercise 1</a></p>
+					<p>In case you get stuck...<a href="http://jsfiddle.net/yonet3d/w319gwyw/" target="_blank"> Solution for Exercise 1</a></p>
 				</section>
 					
 				<!-- 3 -->
@@ -425,7 +425,7 @@ d3.select(".chart")
 	.enter().append("div")
 		.style("width", function(d) { return x(d) + "px"; })
 					</code></pre>
-					<a href="http://jsfiddle.net/yonet3d/at4186ez/2/">JSFiddle</a>
+					<a href="http://jsfiddle.net/yonet3d/at4186ez/2/" target="_blank">JSFiddle</a>
 
 					<!-- <img src="images/quantitative-scale.png"> -->
 				</section>
@@ -443,7 +443,7 @@ var x = d3.scale.ordinal()
 				<section>
 					<h2><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#categorical-colors" target="_blank">Color Categories</a></h2>
 					<p>d3.scale.category10() - Constructs a new ordinal scale with a range of ten categorical colors:</p>
-					<p><a href="http://jsfiddle.net/8CaCn/">JSFiddle</a></p>
+					<p><a href="http://jsfiddle.net/8CaCn/" target="_blank">JSFiddle</a></p>
 					<img class="category-image" src="images/category10.png">
 				</section>
 				<section>
@@ -468,19 +468,19 @@ var xAxis = d3.svg.axis()
     .orient('bottom')
     .tickValues(data);
 					</code></pre>
-					<a href="http://jsfiddle.net/yonet3d/635y98w8/5/">JSFiddle</a>
+					<a href="http://jsfiddle.net/yonet3d/635y98w8/5/" target="_blank">JSFiddle</a>
 				</section>
 
 
 				<section>
 					<section>
-						<h2><a href="https://github.com/mbostock/d3/wiki/Time-Formatting">d3.time</a></h2>
+						<h2><a href="https://github.com/mbostock/d3/wiki/Time-Formatting" target="_blank">d3.time</a></h2>
 
 						<p>d3.time.format - creates a new local time formatter for a given specifier.</p>
 							<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 d3.time.format("%Y-%m-%d");
 							</code></pre>
-							<a href="http://jsfiddle.net/yonet3d/pfL3w9v6/2/">JSFiddle</a>
+							<a href="http://jsfiddle.net/yonet3d/pfL3w9v6/2/" target="_blank">JSFiddle</a>
 						
 					</section>
 					<section>
@@ -491,7 +491,7 @@ var xScale = d3.time.scale()
  .rangeRound([0, width]);
  //rangeRound does the same thing as range but rounds the values to integers or begining of dates.
 						</code></pre>
-						<a href="http://jsfiddle.net/robdodson/KWRxW/">JSFiddle</a>
+						<a href="http://jsfiddle.net/robdodson/KWRxW/" target="_blank">JSFiddle</a>
 					</section>
 					<section>
 						<p>d3.time.intervals - a time interval in local time.</p>
@@ -537,6 +537,7 @@ var xScale = d3.time.scale()
 					<h2>Good News!</h2>
 					<ul>
 						<li class="fragment"><a href="http://nvd3.org/index.html" target="_blank">NVD3</a></li>
+						<li class="fragment"><a href="http://krispo.github.io/angular-nvd3/#/" target="_blank">Angular-NVD3</a></li>
 						<li class="fragment"><a href="http://c3js.org/" target="_blank">C3.js</a></li>
 						<li class="fragment"><a href="http://code.shutterstock.com/rickshaw/examples/" target="_blank">Rickshaw</a></li>
 					</ul>
@@ -553,7 +554,7 @@ var xScale = d3.time.scale()
 
 				<section>
 					<h1>THE END</h1>
-					<h3>BY Aysegul Yonet / aysegulyonet@gmail.com</h3>
+					<h3>BY Aysegul Yonet / <a href="https://twitter.com/AysegulYonet" target="_blank">@AysegulYonet</a></h3>
 				</section>
 
 			</div>
